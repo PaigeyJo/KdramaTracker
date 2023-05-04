@@ -1,0 +1,7 @@
+# Directories
+/node_modules/
+/pgadmin_data/
+/postgres_data/
+
+# Files
+*.env
