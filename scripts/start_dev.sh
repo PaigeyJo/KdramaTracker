@@ -4,4 +4,4 @@ cd "$(dirname "$0")/.." || exit
 
 docker-compose stop
 
-docker-compose -f docker-compose.yml build db && docker-compose -f docker-compose.yml up db
+docker-compose --env-file .env -f docker-compose.yml -f override.dev.yml build api && docker-compose -f docker-compose.yml -f override.dev.yml up api

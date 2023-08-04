@@ -1,7 +1,14 @@
 # Directories
-/node_modules/
-/pgadmin_data/
-/postgres_data/
+**/node_modules/
+**/.yarn/
+**/dist/
+**/postgres_data/
+**/pgadmin_data/
+**/postgres_testing_data/
 
-# Files
+# Files Extensions
 *.env
+*.log
+
+# Specific Files
+.pnp.*

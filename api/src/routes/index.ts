@@ -1,0 +1,1 @@
+export { default as kdramaRoutes } from './kdramas/index.js';
