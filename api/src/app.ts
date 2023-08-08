@@ -2,7 +2,7 @@ import express, { Application } from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 
-import { kdramaRoutes } from '@@routes/index.js';
+import { kdramaRoutes, userKdramaRoutes } from '@@routes/index.js';
 
 function initializeApp(): Application {
     const app = express();
@@ -15,7 +15,8 @@ function initializeApp(): Application {
     app.set("trust proxy", "loopback");
 
     /* Routes */
-    app.use("/kdrama", kdramaRoutes);
+    app.use("/kdramas", kdramaRoutes);
+    app.use("/kdramas/user", userKdramaRoutes);
 
     return app;
 };
