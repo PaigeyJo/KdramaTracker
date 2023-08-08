@@ -4,7 +4,7 @@ import { KDrama } from '@@entities/index.js';
 import { entities, errors } from '@@utils/index.js';
 
 function index(req: Request, res: Response, next: NextFunction) {
-
+    return res.json({ message: "This route no work yet" });
 };
 
 export default index;
