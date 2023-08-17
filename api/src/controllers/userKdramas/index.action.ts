@@ -6,7 +6,7 @@ import { entities, errors, pagination } from '@@utils/index.js';
 
 async function index(req: Request, res: PaginatedResponse, next: NextFunction) {
 
-    const { limit, offset} = res.locals.pagination;
+    const { limit, offset } = res.locals.pagination;
 
     const [userKdramas, err] = await entities.indexAndCount<UserKdrama>(UserKdrama, {
         limit, offset
