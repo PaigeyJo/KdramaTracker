@@ -37,7 +37,12 @@ async function update(req: Request<Body>, res: Response, next: NextFunction) {
     }
 
     const [updatedUserKdrama, updateErr] = await entities.update<UserKdrama>(UserKdrama, {
-        ...req.body
+        ...userKdrama,
+        kdrama_id,
+        episodes_watched,
+        rating,
+        started_on,
+        finished_on
     });
 
     if(updateErr || !updatedUserKdrama) {
